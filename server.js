@@ -6,12 +6,20 @@ server.connection({
     port: 8000
 });
 
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: function(request, reply) {
-        return reply('Test Server');
+server.register(require('inert'), function(error) {
+    if (error) {
+        throw error;
     }
+
+    server.route({
+        method: 'GET',
+        path: '/{param*}',
+        handler: {
+            directory: {
+                path: 'public'
+            }
+        }
+    });
 });
 
 server.start(function(error) {
