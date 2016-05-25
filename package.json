@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/cjduncana/hapi-and-angular-demo/issues"
   },
-  "homepage": "https://github.com/cjduncana/hapi-and-angular-demo#readme"
+  "homepage": "https://github.com/cjduncana/hapi-and-angular-demo#readme",
+  "dependencies": {
+    "hapi": "^13.4.1"
+  }
 }
